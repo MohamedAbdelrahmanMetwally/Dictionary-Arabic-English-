@@ -1,6 +1,5 @@
 package com.example.dictionaryarabic_english;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -8,6 +7,9 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.dictionaryarabic_english.core.database.DictionaryDatabase;
+
 import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private AutoCompleteTextView autoTextView;
