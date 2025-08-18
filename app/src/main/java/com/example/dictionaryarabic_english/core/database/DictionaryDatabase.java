@@ -26,16 +26,23 @@ public class DictionaryDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT meaning FROM dictionary WHERE word = ?", new String[]{word});
         if (cursor.moveToFirst()) {
-            return cursor.getString(0);
+            String meaning = cursor.getString(0);
+            cursor.close();
+            db.close();
+            return meaning;
         }
+        cursor.close();
+        db.close();
         return "Not found";
     }
-  public void insert(String word, String meaning) {
+  public long insert(String word, String meaning) {
       ContentValues contentValues=new ContentValues();
       contentValues.put("word",word);
       contentValues.put("meaning",meaning);
       SQLiteDatabase db=this.getWritableDatabase();
-      db.insert("dictionary",null,contentValues);
+      long value=db.insert("dictionary",null,contentValues);
+      db.close();
+      return value;
   }
     public List<String> getAllWords() {
         List<String> words = new ArrayList<>();
@@ -44,6 +51,8 @@ public class DictionaryDatabase extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
             words.add(cursor.getString(0));
         }
+        cursor.close();
+        db.close();
         return words;
     }
     @Override

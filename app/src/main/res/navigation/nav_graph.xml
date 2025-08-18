@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_main">
+<fragment
+    android:id="@+id/navigation_main"
+    android:name="com.example.dictionaryarabic_english.Main.ui.MainFragment">
+
+    <action
+        android:id="@+id/action_navigation_main_to_navigation_adding_word"
+        app:destination="@id/navigation_adding_word" />
+</fragment>
+    <fragment
+        android:id="@+id/navigation_adding_word"
+        android:name="com.example.dictionaryarabic_english.Main.ui.AddingWordFragment">
+        <action
+            android:id="@+id/action_navigation_adding_word_to_navigation_main"
+            app:destination="@id/navigation_main" />
+    </fragment>
+</navigation>
