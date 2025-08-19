@@ -10,7 +10,11 @@ A simple and fast Android application that allows you to **search**, **view**, a
 - ➕ **Add new words** to the dictionary easily.
 - 🗄 **Local database** using SQLite for offline usage.
 - 🎯 Simple, clean, and user-friendly interface.
-
+- Sqlite Database
+- one activty multiple fragments
+- navigation graph
+- data binding
+- MVVM architecture
 ---
 
 ## 🛠 Technologies Used
@@ -23,11 +27,8 @@ A simple and fast Android application that allows you to **search**, **view**, a
 ---
 
 ## 📂 Project Structure
-- `MainActivity.java` → Main screen with search functionality.
-- `DictionaryDatabase.java` → Handles SQLite database operations.
-- `AddingWord.java` → Screen for adding new words.
-- `activity_main.xml` → Layout for the main screen.
-- `activity_adding_word.xml` → Layout for adding a new word.
+<img width="651" height="799" alt="image" src="https://github.com/user-attachments/assets/628ce232-7581-4ce1-9f0b-7e4f036774cc" />
+
 
 ---
 
@@ -58,4 +59,5 @@ A simple and fast Android application that allows you to **search**, **view**, a
 - **Email:** [mnafe44@gmail.com](mailto:mnafe44@gmail.com)  
 - **GitHub:** [MohamedAbdelrahmanMetwally](https://github.com/MohamedAbdelrahmanMetwally)
    git clone https://github.com/MohamedAbdelrahmanMetwally/DictionaryApp.git
+
 
